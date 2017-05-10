@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+  <h2>Welcome to the Page</h2>
+  <p class="lead">This application is build using Flask </p>
+  <iframe src="https://www.youtube.com/embed/o46v5WkwMXU" width="503" height="330" frameborder="0" allowfullscreen></iframe>
+  <hr>
+  {% if session.logged_in == NULL %}
+    <a href="/register" class="btn btn-primary">Register</a>
+    <a href="/login" class="btn btn-success">Login</a>
+  {% endif %}
+</div>
+{% endblock %}

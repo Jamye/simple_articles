@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <h2>Welcome to the Articles Page</h2>
+  <p class="lead">This application is build using Flask </p>
+
+  <ul class="list-group">
+  {% for items in articles %}
+    <li class="list-group-item"><a href="article/{{items.id}}">{{items.title}}</a></li>
+  {% endfor%}
+</ul>
+{% endblock %}
